@@ -5,18 +5,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-public class CustomUserDetails extends Staff implements UserDetails {
+public class CustomUserDetails extends Staff {
 
-    public CustomUserDetails(final Staff staff) {
+    /*public CustomUserDetails(final Staff staff) {
         super(staff);
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
-        /*return super.getRoles().stream()
+        *//*return super.getRoles().stream()
                 .map(role -> new SimpleGrantedAuthority("ROLE_" + role.getRole()))
-                .collect(Collectors.toList());*/
+                .collect(Collectors.toList());*//*
 
         return null;
     }
@@ -49,5 +49,5 @@ public class CustomUserDetails extends Staff implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
+    }*/
 }

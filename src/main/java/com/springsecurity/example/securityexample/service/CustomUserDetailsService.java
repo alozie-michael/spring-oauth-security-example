@@ -19,13 +19,13 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-public class CustomUserDetailsService implements UserDetailsService {
+public class CustomUserDetailsService{
 
-    private final StaffRepository staffRepository;
+    /*private final StaffRepository staffRepository;
 
     @Autowired
     public CustomUserDetailsService(StaffRepository staffRepository) { this.staffRepository = staffRepository;
-    }
+    }*/
 
     /*@Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -35,7 +35,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         return staff.map(CustomUserDetails::new).get();
     }*/
 
-    @Override
+    /*@Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
     {
         Staff staff = staffRepository.findByEmailContaining(username);
@@ -50,7 +50,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                         .map(SimpleGrantedAuthority::new).collect(Collectors.toSet());
 
         return new User(staff.getEmail(), staff.getPassword(), grantedAuthorities);
-    }
+    }*/
 
    /* public static void main(String[] args) {
         String gensalt = BCrypt.gensalt();
